@@ -88,7 +88,7 @@
         <section class="page-section bg-info text-white mb-0" id="tts">	
             <div class="container">
               <div class="text-center">
-                <h2 class="page-section-heading d-inline-block text-white">Zero-shot TTS (LibriTTS)</h2>
+                <h2 class="page-section-heading d-inline-block text-white">Zero-shot TTS for LibriSpeech test-clean</h2>
                 <p class="pre-wrap lead"> All speakers are unseen during training</p>
               </div>
   
@@ -110,30 +110,69 @@
                           <td rowspan="4" style="vertical-align: top;"><p> GT </p>
                             <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>  YourTTS </p>
+                          <td><p> VALL-E-X </p>
                             <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                        
-                          <td><p>&nbsp; HierSpeech</p>
+                          <td><p>&nbsp; HierSpeech++(a)</p>
                             <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>&nbsp; Vall-E-X</p>
+                          <td><p>&nbsp; HierSpeech++(b)</p>
                             <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>XTTS(v1)</p>
+                          <td><p>StyleTTS 2</p>
                             <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                         </tr>
                       
                         <tr>
-                          <td><p><strong>ZMM-TTS <br>(LT460)</strong></p>
+                          <td><p><strong>ZMM-TTS2x(a)</strong></p>
                             <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>  
-                          <td><p><strong>ZMM-TTS <br>(LT960)</strong></p>
+                          <td><p><strong>ZMM-TTS2x(b)</strong></p>
                             <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p><strong>ZMM-TTS <br>(LT960, others) </strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_eng_kor/121_121726_000029_000003.wav" type="audio/wav"></audio>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                      
+                    </table>
+
+                     <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+  
+                      <thead>
+                        <tr >
+                       <th colspan="5"  style="width: 100%" ><em>Sentence 1 (121_121726_000029_000003)</em><p></p><p><em> In Germany, they generally "Hock the Kaiser." </em></p>
+                       </th> 
+                      </tr>
+                    
+                    </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="4" style="vertical-align: top;"><p> GT </p>
+                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/121_121726_000029_000003.wav" type="audio/wav"></audio>
+                          </td>
+                          <td><p> VALL-E-X </p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
+                          </td>
+                       
+                          <td><p>&nbsp; HierSpeech++(a)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/121_121726_000029_000003.wav" type="audio/wav"></audio>
+                          </td>
+                          <td><p>&nbsp; HierSpeech++(b)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
+                          </td>
+                          <td><p>StyleTTS 2</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
+                          </td>
+                        </tr>
+                      
+                        <tr>
+                          <td><p><strong>ZMM-TTS2x(a)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/121_121726_000029_000003.wav" type="audio/wav"></audio>
+                          </td>  
+                          <td><p><strong>ZMM-TTS2x(b)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                           <td></td>
                         </tr>
@@ -141,54 +180,53 @@
                       
                     </table>
 
-                      <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+		<table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+  
                       <thead>
                         <tr >
-                       <th colspan="5"  style="width: 100%" ><em>Sentence 2 (237_126133_000047_000000)</em><p></p><p><em> "Don't mind it, Polly," whispered Jasper; "twasn't her fault."</em></p>
+                       <th colspan="5"  style="width: 100%" ><em>Sentence 1 (121_121726_000029_000003)</em><p></p><p><em> In Germany, they generally "Hock the Kaiser." </em></p>
                        </th> 
                       </tr>
-        
+                    
                     </thead>
                       <tbody>
                         <tr>
                           <td rowspan="4" style="vertical-align: top;"><p> GT </p>
-                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/237_126133_000047_000000.wav" type="audio/wav"></audio>
+                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>  YourTTS </p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/237_126133_000047_000000.wav" type="audio/wav"></audio>
+                          <td><p> VALL-E-X </p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                        
-                          <td><p>&nbsp; HierSpeech</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/237_126133_000047_000000.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(a)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>&nbsp; Vall-E-X</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/237_126133_000047_000000.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(b)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>XTTS(v1)</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/237_126133_000047_000000.wav" type="audio/wav"></audio>
+                          <td><p>StyleTTS 2</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                         </tr>
                       
                         <tr>
-                          <td><p><strong>ZMM-TTS <br>(LT460)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/237_126133_000047_000000.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(a)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>  
-                          <td><p><strong>ZMM-TTS <br>(LT960)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/237_126133_000047_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p><strong>ZMM-TTS <br>(LT960, others) </strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_eng_kor/237_126133_000047_000000.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(b)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                           <td></td>
                         </tr>
                       </tbody>
+                      
                     </table>
 
-
-                    <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+		<table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+  
                       <thead>
                         <tr >
-                       <th colspan="5"  style="width: 100%" ><em>Sentence 3 (260_123288_000020_000000)</em><p></p><p><em> "The sail! the sail!" I cry, motioning to lower it."</em></p>
+                       <th colspan="5"  style="width: 100%" ><em>Sentence 1 (121_121726_000029_000003)</em><p></p><p><em> In Germany, they generally "Hock the Kaiser." </em></p>
                        </th> 
                       </tr>
                     
@@ -196,42 +234,41 @@
                       <tbody>
                         <tr>
                           <td rowspan="4" style="vertical-align: top;"><p> GT </p>
-                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/260_123288_000020_000000.wav" type="audio/wav"></audio>
+                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>  YourTTS </p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/260_123288_000020_000000.wav" type="audio/wav"></audio>
+                          <td><p> VALL-E-X </p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                        
-                          <td><p>&nbsp; HierSpeech</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/260_123288_000020_000000.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(a)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>&nbsp; Vall-E-X</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/260_123288_000020_000000.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(b)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>XTTS(v1)</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/260_123288_000020_000000.wav" type="audio/wav"></audio>
+                          <td><p>StyleTTS 2</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                         </tr>
                       
                         <tr>
-                          <td><p><strong>ZMM-TTS <br>(LT460)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/260_123288_000020_000000.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(a)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>  
-                          <td><p><strong>ZMM-TTS <br>(LT960)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/260_123288_000020_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p><strong>ZMM-TTS <br>(LT960, others) </strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_eng_kor/260_123288_000020_000000.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(b)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                           <td></td>
                         </tr>
-                      </tbody>            
+                      </tbody>
+                      
                     </table>
 
-                    <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+		<table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+  
                       <thead>
                         <tr >
-                       <th colspan="5"  style="width: 100%" ><em>Sentence 4 (908_31957_000017_000001)</em><p></p><p><em> A ring of amethyst I could not wear here, plainer to my sight, Than that first kiss.</em></p>
+                       <th colspan="5"  style="width: 100%" ><em>Sentence 1 (121_121726_000029_000003)</em><p></p><p><em> In Germany, they generally "Hock the Kaiser." </em></p>
                        </th> 
                       </tr>
                     
@@ -239,42 +276,41 @@
                       <tbody>
                         <tr>
                           <td rowspan="4" style="vertical-align: top;"><p> GT </p>
-                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/908_31957_000017_000001.wav" type="audio/wav"></audio>
+                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>  YourTTS </p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/908_31957_000017_000001.wav" type="audio/wav"></audio>
+                          <td><p> VALL-E-X </p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                        
-                          <td><p>&nbsp; HierSpeech</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/908_31957_000017_000001.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(a)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>&nbsp; Vall-E-X</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/908_31957_000017_000001.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(b)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>XTTS(v1)</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/908_31957_000017_000001.wav" type="audio/wav"></audio>
+                          <td><p>StyleTTS 2</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                         </tr>
                       
                         <tr>
-                          <td><p><strong>ZMM-TTS <br>(LT460)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/908_31957_000017_000001.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(a)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>  
-                          <td><p><strong>ZMM-TTS <br>(LT960)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/908_31957_000017_000001.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p><strong>ZMM-TTS <br>(LT960, others) </strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_eng_kor/908_31957_000017_000001.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(b)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                           <td></td>
                         </tr>
-                      </tbody>            
+                      </tbody>
+                      
                     </table>
 
-                    <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+		<table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
+  
                       <thead>
                         <tr >
-                       <th colspan="5"  style="width: 100%" ><em>Sentence 5 (5683_32879_000025_000000)</em><p></p><p><em> 'No, indeed, Dorcas--never, and never will; and I think, though I have learned to fear death, I would rather die than let Stanley even suspect it.'</em></p>
+                       <th colspan="5"  style="width: 100%" ><em>Sentence 1 (121_121726_000029_000003)</em><p></p><p><em> In Germany, they generally "Hock the Kaiser." </em></p>
                        </th> 
                       </tr>
                     
@@ -282,80 +318,34 @@
                       <tbody>
                         <tr>
                           <td rowspan="4" style="vertical-align: top;"><p> GT </p>
-                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/5683_32879_000025_000000.wav" type="audio/wav"></audio>
+                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>  YourTTS </p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/5683_32879_000025_000000.wav" type="audio/wav"></audio>
+                          <td><p> VALL-E-X </p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                        
-                          <td><p>&nbsp; HierSpeech</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/5683_32879_000025_000000.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(a)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>&nbsp; Vall-E-X</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/5683_32879_000025_000000.wav" type="audio/wav"></audio>
+                          <td><p>&nbsp; HierSpeech++(b)</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
-                          <td><p>XTTS(v1)</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/5683_32879_000025_000000.wav" type="audio/wav"></audio>
+                          <td><p>StyleTTS 2</p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                         </tr>
                       
                         <tr>
-                          <td><p><strong>ZMM-TTS <br>(LT460)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/5683_32879_000025_000000.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(a)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>  
-                          <td><p><strong>ZMM-TTS <br>(LT960)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/5683_32879_000025_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p><strong>ZMM-TTS <br>(LT960, others) </strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_eng_kor/5683_32879_000025_000000.wav" type="audio/wav"></audio>
+                          <td><p><strong>ZMM-TTS2x(b)</strong></p>
+                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/121_121726_000029_000003.wav" type="audio/wav"></audio>
                           </td>
                           <td></td>
                         </tr>
-                      </tbody>            
-                    </table>
-
-
-                    <table class="table table-responsive align-content-center" style="background-color: rgba(255, 255, 255, 0.993); border-radius: 20px">
-                      <thead>
-                        <tr >
-                       <th colspan="5"  style="width: 100%" ><em>Sentence 6 (7021_85628_000026_000000)</em><p></p><p><em> The Princess certainly was beautiful, and he would have dearly liked to be kissed by her, but the cap which his mother had made he would not give up on any condition.</em></p>
-                       </th> 
-                      </tr>
-                    
-                    </thead>
-                      <tbody>
-                        <tr>
-                          <td rowspan="4" style="vertical-align: top;"><p> GT </p>
-                            <audio id="player" controls ><source src="audio/1_zeroshot_tts/libritts_test_clean_full/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p>  YourTTS </p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/YourTTS_test-clean/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>
-                       
-                          <td><p>&nbsp; HierSpeech</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeech/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p>&nbsp; Vall-E-X</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/valle_clean/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p>XTTS(v1)</p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/coquitts_test_clean/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>
-                        </tr>
+                      </tbody>
                       
-                        <tr>
-                          <td><p><strong>ZMM-TTS <br>(LT460)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt460/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>  
-                          <td><p><strong>ZMM-TTS <br>(LT960)</strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_lt960/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td><p><strong>ZMM-TTS <br>(LT960, others) </strong></p>
-                            <audio id="player" controls><source src="audio/1_zeroshot_tts/hierspeechpp_eng_kor/7021_85628_000026_000000.wav" type="audio/wav"></audio>
-                          </td>
-                          <td></td>
-                        </tr>
-                      </tbody>            
                     </table>
 
                   </div>
